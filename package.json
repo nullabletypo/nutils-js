@@ -24,7 +24,6 @@
   "homepage": "https://github.com/nullabletypo/f",
   "dependencies": {},
   "devDependencies": {
-    "@cotto/tslint-config": "^0.1.4",
     "@types/jest": "^23.1.6",
     "jest": "^23.4.1",
     "lodash.isequal": "^4.5.0",
@@ -34,6 +33,7 @@
     "ts-jest": "^23.0.0",
     "tsconfig-paths": "^3.4.2",
     "tslint": "^5.10.0",
+    "tslint-config": "https://github.com/nullabletypo/tslint-config",
     "typescript": "^3.0.0-rc"
   },
   "keywords": [],
