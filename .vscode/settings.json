@@ -1,0 +1,33 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "javascript.validate.enable": true,
+  "tslint.exclude": [
+    "**/public/**",
+    "**/dist/**",
+    "**/es/**",
+    "**/node_modules/**"
+  ],
+  "files.exclude": {
+    "**/dist/**": false,
+    "**/*bundle.*/**": true,
+    "**/node_modules/**": true
+  },
+  // settings for prettier
+  "prettier.eslintIntegration": false,
+  "prettier.stylelintIntegration": true,
+  // "javascript.format.enable": false,
+  // "typescript.format.enable": false,
+  // "[javascript]": {
+  //   "editor.formatOnSave": false
+  // },
+  // "[typescript]": {
+  //   "editor.formatOnSave": true
+  // },
+  // "[typescriptreact]": {
+  //   "editor.formatOnSave": false
+  // },
+  "prettier.disableLanguages": ["typescript", "javascript"],
+  "code-runner.executorMap": {
+    "typescript": "ts-node -r tsconfig-paths/register"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extends": ["@cotto/tslint-config"],
+  "rules": {
+    "no-namespace": false,
+    "ter-indent": [true, 2, { "SwitchCase": 1 }]
+  }
+}
