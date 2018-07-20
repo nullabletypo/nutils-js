@@ -1,4 +1,7 @@
-import * as _ from '../src/index'
+import * as _ from '../src/lang'
+import { noop } from '../src/noop'
+
+// tslint:disable:max-classes-per-file
 
 test('isString', () => {
   expect(_.isString('')).toBe(true)
@@ -98,7 +101,7 @@ test('isWeakSet', () => {
 })
 
 test('isFunction', () => {
-  expect(_.isFunction(_.noop)).toBe(true)
+  expect(_.isFunction(noop)).toBe(true)
   expect(_.isFunction(class Klass { })).toBe(true)
   expect(_.isFunction(null)).toBe(false)
 })
@@ -120,7 +123,7 @@ describe('isEmpty', () => {
   })
 
   test('function', () => {
-    expect(_.isEmpty(_.noop)).toBe(true)
+    expect(_.isEmpty(noop)).toBe(true)
     expect(_.isEmpty(class Klass { })).toBe(true)
   })
 
