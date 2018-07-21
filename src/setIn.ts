@@ -1,7 +1,7 @@
 import { parsePath } from './internal/parsePath'
 import { rec } from './internal/rec'
 
-export interface SetInFunction {
+interface SetInFunction {
   <T extends object,
     K extends keyof T,
     V extends T[K]>(src: (() => T) | T, path: K | [K], value: V): T

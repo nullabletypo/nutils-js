@@ -1,7 +1,7 @@
 import { parsePath } from './internal/parsePath'
 import { isPlainObject } from './lang'
 
-export interface GetInFunction {
+interface GetInFunction {
   <T extends object,
     K extends keyof T>(src: (() => T) | T, path: K | [K]): T[K]
   <T extends object,

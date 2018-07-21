@@ -2,7 +2,7 @@ import { parsePath } from './internal/parsePath'
 import { omit } from './omit'
 import { updateIn } from './updateIn'
 
-export interface DeleteInFunction {
+interface DeleteInFunction {
   <T extends object, K extends keyof T>(src: (() => T) | T, path: K | [K]): Partial<T>
   <T extends object,
     K1 extends keyof T,
