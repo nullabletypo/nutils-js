@@ -1,4 +1,3 @@
-export * from './internal';
 export * from './after';
 export * from './and';
 export * from './before';

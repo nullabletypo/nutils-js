@@ -1,5 +1,4 @@
 // created from 'create-ts-index'
-export * from './internal';
 export * from './after';
 export * from './and';
 export * from './before';

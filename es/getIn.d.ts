@@ -1,4 +1,4 @@
-export interface GetInFunction {
+interface GetInFunction {
     <T extends object, K extends keyof T>(src: (() => T) | T, path: K | [K]): T[K];
     <T extends object, K1 extends keyof T, K2 extends keyof T[K1]>(src: (() => T) | T, path: [K1, K2]): T[K1][K2];
     <T extends object, K1 extends keyof T, K2 extends keyof T[K1]>(src: (() => T) | T, path: [K1, K2]): T[K1][K2];
@@ -9,3 +9,4 @@ export interface GetInFunction {
     <T extends object>(src: (() => T) | T, path: string | string[]): any;
 }
 export declare const getIn: GetInFunction;
+export {};

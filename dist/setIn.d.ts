@@ -1,4 +1,4 @@
-export interface SetInFunction {
+interface SetInFunction {
     <T extends object, K extends keyof T, V extends T[K]>(src: (() => T) | T, path: K | [K], value: V): T;
     <T extends object, K1 extends keyof T, K2 extends keyof T[K1], V extends T[K1][K2]>(src: (() => T) | T, path: [K1, K2], value: V): T;
     <T extends object, K1 extends keyof T, K2 extends keyof T[K1], K3 extends keyof T[K1][K2], V extends T[K1][K2][K3]>(src: (() => T) | T, path: [K1, K2, K3], value: V): T;
@@ -8,3 +8,4 @@ export interface SetInFunction {
     <T extends object>(src: (() => T) | T, path: string, value: any): any;
 }
 export declare const setIn: SetInFunction;
+export {};
