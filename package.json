@@ -1,5 +1,5 @@
 {
-  "name": "f",
+  "name": "utils",
   "description": "utility functions",
   "version": "0.0.2",
   "author": "nullabletypo",
@@ -16,12 +16,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nullabletypo/f.git"
+    "url": "https://github.com/nullabletypo/utils.git"
   },
   "bugs": {
-    "url": "https://github.com/nullabletypo/f/issues"
+    "url": "https://github.com/nullabletypo/utils/issues"
   },
-  "homepage": "https://github.com/nullabletypo/f",
+  "homepage": "https://github.com/nullabletypo/utils",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^23.3.0",
@@ -39,7 +39,8 @@
   },
   "keywords": [],
   "scripts": {
-    "compile": "npm-run-all compile:*",
+    "create-index": "cti -s ./src ",
+    "compile": "npm-run-all create-index compile:*",
     "compile:dist": "tsc",
     "compile:es": "tsc --module es2015 --outDir ./es",
     "clean": "run-p clean:**",
