@@ -4,6 +4,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
+__export(require("./internal"));
 __export(require("./after"));
 __export(require("./and"));
 __export(require("./before"));
@@ -14,12 +15,15 @@ __export(require("./conforms"));
 __export(require("./constant"));
 __export(require("./contains"));
 __export(require("./defference"));
+__export(require("./delIn"));
 __export(require("./delay"));
 __export(require("./entries"));
 __export(require("./existy"));
 __export(require("./flatten"));
 __export(require("./getGlobal"));
+__export(require("./getIn"));
 __export(require("./has"));
+__export(require("./hasIn"));
 __export(require("./identity"));
 __export(require("./idx"));
 __export(require("./intersection"));
@@ -35,6 +39,9 @@ __export(require("./or"));
 __export(require("./pick"));
 __export(require("./range"));
 __export(require("./set"));
+__export(require("./setIn"));
 __export(require("./unique"));
+__export(require("./updateIn"));
+__export(require("./validateIn"));
 __export(require("./values"));
 //# sourceMappingURL=index.js.map
