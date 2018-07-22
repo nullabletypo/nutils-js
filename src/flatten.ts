@@ -1,5 +1,9 @@
 import { identity } from './identity'
-import { DeepFlatten as DF } from './types'
+
+type Flatten<T> = T extends (infer U)[] ? U : T
+type Flatten5<T> = Flatten<Flatten<Flatten<Flatten<Flatten<T>>>>>
+type Flatten10<T> = Flatten5<Flatten5<T>>
+type DF<T> = Flatten10<Flatten10<Flatten10<Flatten10<Flatten10<T>>>>>
 
 interface Mapper<T, U> {
   (val: DF<T>): U

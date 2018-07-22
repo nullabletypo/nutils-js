@@ -25,6 +25,12 @@ export interface AnyFunction {
 
 export type Params<F> = F extends (...val: infer A) => any ? A : []
 
+export type Head<T> = T extends [infer H, ...any[]] ? H : never
+
+export type Tail<T extends any[]> = ((...x: T) => void) extends ((h: any, ...rest: infer R) => void) ? R : never
+
+export type Union<T> = T extends [...(infer U)[]] ? U : never
+
 /**
  * Get Type that omit keys from T
  * K should be not keyof T but string.
@@ -66,9 +72,3 @@ export type WeakDiff<T, U> = Diff<T, U> & {
 //  *
 //  */
 export type Overwrite<T, U> = Diff<T, U> & U
-
-
-export type Flatten<T> = T extends (infer U)[] ? U : T
-type Flatten5<T> = Flatten<Flatten<Flatten<Flatten<Flatten<T>>>>>
-type Flatten10<T> = Flatten5<Flatten5<T>>
-export type DeepFlatten<T> = Flatten10<Flatten10<Flatten10<Flatten10<Flatten10<T>>>>>
