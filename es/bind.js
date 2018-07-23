@@ -1,19 +1,13 @@
-export { }
 // import { AnyFunction as AF, Params as P } from './types'
-
 // type R<F extends AF> = ReturnType<F>
-
 // export const _ = Symbol('PLACEHOLDER')
-
 // type _ = typeof _
-
 // type F0 = () => any
 // type F1 = (...v: [any]) => any
 // type F2 = (...v: [any, any]) => any
 // type F3 = (...v: [any, any, any]) => any
 // type F4 = (...v: [any, any, any, any]) => any
 // type F_ = (...v: [any?, any?, any?, any?]) => any
-
 // // tslint:disable:unified-signatures
 // interface BindFunciton {
 //   /* arg-1 */
@@ -61,8 +55,6 @@ export { }
 //   /* arg-0 */
 //   <F extends F0>(f: F): () => R<F>
 // }
-
-
 // /*
 // const by = (a: number, b: number, c: number) => a * b * c
 // cosnt bound = bind(by, [1, _, 2])
@@ -74,8 +66,6 @@ export { }
 //     return fn.apply(null, src)
 //   }
 // }) as BindFunciton
-
-
 // //
 // // ─── TEST ───────────────────────────────────────────────────────────────────────
 // //
@@ -83,7 +73,6 @@ export { }
 // const f1 = (a: string) => a
 // const f2 = (a: string, b: number) => ({ a, b })
 // const f3 = (a: string, b: number, c: boolean) => ({ a, b, c })
-
 // /*
 //   <F extends F1>(f: F): (...v: P<F>) => R<F>
 //   <F extends F1>(f: F, ...v: P<F>): () => R<F>
@@ -122,7 +111,6 @@ export { }
 // const c5 = bind(f3, _, 1)
 // const c6 = bind(f3, _, _, true)
 // const c7 = bind(f3, '', 1, true)
-
 // console.log({
 //   c1: c1('', 1, true),
 //   c2: c2(1, true),
@@ -132,13 +120,11 @@ export { }
 //   c6: c6('', 1),
 //   c7: c7(),
 // })
-
-
 // /*
 //   <F extends F0>(f: F): () => R<F>
 // */
 // const d1 = bind(f0)
 // console.log({ d1: d1() })!
-
 // const f2_ = (a?: number, b?: string) => ({ a, b })
 // const e1 = bind(f2_, _, '')
+//# sourceMappingURL=bind.js.map

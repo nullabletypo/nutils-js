@@ -3,6 +3,7 @@
 export * from './after';
 export * from './and';
 export * from './before';
+export * from './bind';
 export * from './combine';
 export * from './compact';
 export * from './compose';
