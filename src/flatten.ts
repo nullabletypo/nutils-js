@@ -9,7 +9,10 @@ interface Mapper<T, U> {
   (val: DF<T>): U
 }
 
-export function flatten<T extends any[], U = DF<T>>(src: T, mapper = identity as Mapper<T, U>): U[] {
+export function flatten<T extends any[], U = DF<T>>(
+  src: T,
+  mapper = identity as Mapper<T, U>,
+): U[] {
   return src.reduce(transform, [])
 
   function transform(acc: any[], el: any): any[] {

@@ -10,7 +10,7 @@ interface VM<T, U> {
 }
 
 interface Mappers<T, U> {
-  key?: KM<T>,
+  key?: KM<T>
   val?: VM<T, U>
 }
 
@@ -31,10 +31,13 @@ function _idx<T, V = T>(src: Iterable<T>, mappers?: Mappers<T, V>) {
   return Array.from(src).reduce(transformer(m), {} as HashMap<V>)
 }
 
-function by<T, K extends keyof T>(src: Iterable<T>, key: K, mapper?: VM<T, T[K]>) {
+function by<T, K extends keyof T>(
+  src: Iterable<T>,
+  key: K,
+  mapper?: VM<T, T[K]>,
+) {
   const m: any = { key: (el: T) => el[key], val: mapper }
   return _idx(src, m)
 }
 
 export const idx = Object.assign(_idx, { by })
-

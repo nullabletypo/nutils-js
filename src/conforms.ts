@@ -2,9 +2,7 @@ import { Pred, HashMap } from './types'
 import { isObject } from './lang'
 import { constant } from './constant'
 
-type PredMap<T> = {
-  [K in keyof T]: Pred<T[K]>
-}
+type PredMap<T> = { [K in keyof T]: Pred<T[K]> }
 
 const _conforms = <T>(predMap: PredMap<T>) => {
   return (val: any): val is T => {

@@ -1,13 +1,10 @@
 export type Falsy = false | undefined | null | 0 | -0 | ''
 
-
 export interface HashMap<T = any> {
   [k: string]: T
 }
 
-export type NonNullableHashMap<T> = {
-  [P in keyof T]-?: T[P]
-}
+export type NonNullableHashMap<T> = { [P in keyof T]-?: T[P] }
 
 export interface Pred<T> {
   (value: any | T): value is T
@@ -27,7 +24,12 @@ export type Params<F> = F extends (...val: infer A) => any ? A : []
 
 export type Head<T> = T extends [infer H, ...any[]] ? H : never
 
-export type Tail<T extends any[]> = ((...x: T) => void) extends ((h: any, ...rest: infer R) => void) ? R : never
+export type Tail<T extends any[]> = ((...x: T) => void) extends ((
+  h: any,
+  ...rest: infer R
+) => void)
+  ? R
+  : never
 
 export type Union<T> = T extends [...(infer U)[]] ? U : never
 
@@ -53,14 +55,11 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
  */
 export type Diff<T, U> = Omit<T, keyof T & keyof U>
 
-
 /**
  * Get Diff (T - U) and Partila<T>
  */
-export type WeakDiff<T, U> = Diff<T, U> & {
-  [K in Extract<keyof T, keyof U>]?: T[K]
-}
-
+export type WeakDiff<T, U> = Diff<T, U> &
+  { [K in Extract<keyof T, keyof U>]?: T[K] }
 
 // /**
 //  * Overwrite T by U

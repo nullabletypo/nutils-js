@@ -6,7 +6,7 @@ export function range(start: number, end: number, step?: number): number[] //tsl
 export function range(x: number, y?: number, z = 1) {
   z = Math.abs(z) || 1
   const [start, end] = arguments.length === 1 ? [0, x] : [x, y!]
-  const step = Math.sign(end - start) >= 0 ? z : (z * -1)
+  const step = Math.sign(end - start) >= 0 ? z : z * -1
   let current = start
   const result: number[] = []
   const comparator = director(start, end)
@@ -20,7 +20,5 @@ export function range(x: number, y?: number, z = 1) {
 }
 
 function director(start: number, end: number) {
-  return (start <= end)
-    ? (n: number) => n <= end
-    : (n: number) => n >= end
+  return start <= end ? (n: number) => n <= end : (n: number) => n >= end
 }

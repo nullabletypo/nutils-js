@@ -62,7 +62,7 @@ test('isObject', () => {
 })
 
 test('isPlainObject', () => {
-  class Klass { }
+  class Klass {}
   expect(_.isPlainObject({})).toBe(true)
   expect(_.isPlainObject(new Klass())).toBe(false)
   expect(_.isPlainObject('')).toBe(false)
@@ -102,7 +102,7 @@ test('isWeakSet', () => {
 
 test('isFunction', () => {
   expect(_.isFunction(noop)).toBe(true)
-  expect(_.isFunction(class Klass { })).toBe(true)
+  expect(_.isFunction(class Klass {})).toBe(true)
   expect(_.isFunction(null)).toBe(false)
 })
 
@@ -124,7 +124,7 @@ describe('isEmpty', () => {
 
   test('function', () => {
     expect(_.isEmpty(noop)).toBe(true)
-    expect(_.isEmpty(class Klass { })).toBe(true)
+    expect(_.isEmpty(class Klass {})).toBe(true)
   })
 
   test('undefined', () => {
@@ -192,11 +192,15 @@ describe('isEmpty', () => {
     // tslint:disable:max-classes-per-file
     class K1 {
       prop = 'props'
-      proto() {/*  */ }
+      proto() {
+        /*  */
+      }
     }
 
     class K2 {
-      proto() {/*  */ }
+      proto() {
+        /*  */
+      }
     }
 
     expect(_.isEmpty(new K1())).toBe(false)

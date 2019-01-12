@@ -5,7 +5,11 @@ const square = (n: number) => n * n
 const toString = (s: number) => s + ''
 
 test('compose', () => {
-  const f = compose(add, square, toString)
+  const f = compose(
+    add,
+    square,
+    toString,
+  )
   expect(f(2, 2)).toBe('16')
 })
 

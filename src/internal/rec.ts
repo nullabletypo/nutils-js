@@ -1,4 +1,9 @@
-export function rec(src: any, path: (string | number)[], value: any, idx: number) {
+export function rec(
+  src: any,
+  path: (string | number)[],
+  value: any,
+  idx: number,
+) {
   let clone
   const key = path[idx]
 
@@ -8,8 +13,13 @@ export function rec(src: any, path: (string | number)[], value: any, idx: number
     } else {
       clone = { ...src }
     }
-    clone[key] = rec(clone[key] !== undefined ? clone[key] : {}, path, value, idx + 1)
+    clone[key] = rec(
+      clone[key] !== undefined ? clone[key] : {},
+      path,
+      value,
+      idx + 1,
+    )
     return clone
   }
-  return (typeof value === 'function') ? value(src) : value
+  return typeof value === 'function' ? value(src) : value
 }

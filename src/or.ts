@@ -20,13 +20,12 @@ interface OrFunction {
 }
 
 export const or = ((...funcs: Pred<any>[]) => {
-  return ((val: any) => {
+  return (val: any) => {
     for (const f of funcs) {
       if (f(val)) {
         return true
       }
     }
     return false
-  })
+  }
 }) as OrFunction
-

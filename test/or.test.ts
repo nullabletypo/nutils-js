@@ -1,7 +1,6 @@
 import { or } from '../src/or'
 import { isString, isNull, isNumber } from '../src/lang'
 
-
 test('or', () => {
   const pred = or(isString, isNumber, isNull)
   expect(pred('')).toBe(true)

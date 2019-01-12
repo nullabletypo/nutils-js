@@ -9,4 +9,3 @@ export function delay(ms = 0) {
     }, ms)
   })
 }
-

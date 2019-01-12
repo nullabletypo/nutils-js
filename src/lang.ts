@@ -17,7 +17,7 @@ export function isNull(value: any): value is null {
 }
 
 export function isVoid(value: any): value is void {
-  return (value === undefined) || (value === null)
+  return value === undefined || value === null
 }
 
 export function isBoolean(value: any): value is boolean {
@@ -32,7 +32,9 @@ export function isArray<T>(value: T[] | any): value is T[] {
 }
 
 export function isPlainObject<T = HashMap>(obj: any | T): obj is T {
-  return obj instanceof Object && Object.getPrototypeOf(obj) === Object.prototype
+  return (
+    obj instanceof Object && Object.getPrototypeOf(obj) === Object.prototype
+  )
 }
 
 export function isObject<T extends object>(obj: any | T): obj is T {
@@ -55,11 +57,15 @@ export function isSet<T>(value: any | Set<T>): value is Set<T> {
   return value instanceof Set
 }
 
-export function isWeakMap<K extends object, V>(value: any | WeakMap<K, V>): value is WeakMap<K, V> {
+export function isWeakMap<K extends object, V>(
+  value: any | WeakMap<K, V>,
+): value is WeakMap<K, V> {
   return value instanceof WeakMap
 }
 
-export function isWeakSet<T extends object>(value: any | WeakSet<T>): value is WeakSet<T> {
+export function isWeakSet<T extends object>(
+  value: any | WeakSet<T>,
+): value is WeakSet<T> {
   return value instanceof WeakSet
 }
 

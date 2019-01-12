@@ -1,4 +1,4 @@
-export { }
+export {}
 // import { AnyFunction as AF, Params as P } from './types'
 
 // type R<F extends AF> = ReturnType<F>
@@ -62,7 +62,6 @@ export { }
 //   <F extends F0>(f: F): () => R<F>
 // }
 
-
 // /*
 // const by = (a: number, b: number, c: number) => a * b * c
 // cosnt bound = bind(by, [1, _, 2])
@@ -74,7 +73,6 @@ export { }
 //     return fn.apply(null, src)
 //   }
 // }) as BindFunciton
-
 
 // //
 // // ─── TEST ───────────────────────────────────────────────────────────────────────
@@ -132,7 +130,6 @@ export { }
 //   c6: c6('', 1),
 //   c7: c7(),
 // })
-
 
 // /*
 //   <F extends F0>(f: F): () => R<F>

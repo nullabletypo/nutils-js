@@ -3,4 +3,6 @@
  *
  * @export
  */
-export function noop(..._: any[]) {/* no operation */ }
+export function noop(..._: any[]) {
+  /* no operation */
+}
