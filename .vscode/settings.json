@@ -13,20 +13,15 @@
     "**/node_modules/**": true
   },
   // settings for prettier
-  "prettier.eslintIntegration": false,
+  // prettier-vscode
+  // https://github.com/prettier/prettier-vscode
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": true,
   "prettier.stylelintIntegration": true,
-  // "javascript.format.enable": false,
-  // "typescript.format.enable": false,
-  // "[javascript]": {
-  //   "editor.formatOnSave": false
-  // },
-  // "[typescript]": {
-  //   "editor.formatOnSave": true
-  // },
-  // "[typescriptreact]": {
-  //   "editor.formatOnSave": false
-  // },
-  "prettier.disableLanguages": ["typescript", "javascript"],
+  "prettier.requireConfig": true,
+  // disable editor format for prettier
+  "typescript.format.enable": false,
+  "javascript.format.enable": false,
   "code-runner.executorMap": {
     "typescript": "ts-node -r tsconfig-paths/register"
   }
