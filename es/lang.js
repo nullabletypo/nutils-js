@@ -11,7 +11,7 @@ export function isNull(value) {
     return value === null;
 }
 export function isVoid(value) {
-    return (value === undefined) || (value === null);
+    return value === undefined || value === null;
 }
 export function isBoolean(value) {
     return typeof value === 'boolean';
@@ -23,7 +23,7 @@ export function isArray(value) {
     return Array.isArray(value);
 }
 export function isPlainObject(obj) {
-    return obj instanceof Object && Object.getPrototypeOf(obj) === Object.prototype;
+    return (obj instanceof Object && Object.getPrototypeOf(obj) === Object.prototype);
 }
 export function isObject(obj) {
     return obj === Object(obj);

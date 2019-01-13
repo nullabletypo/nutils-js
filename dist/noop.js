@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
  *
  * @export
  */
-function noop(..._) { }
+function noop(..._) {
+    /* no operation */
+}
 exports.noop = noop;
 //# sourceMappingURL=noop.js.map

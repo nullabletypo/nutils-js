@@ -13,7 +13,7 @@ function rec(src, path, value, idx) {
         clone[key] = rec(clone[key] !== undefined ? clone[key] : {}, path, value, idx + 1);
         return clone;
     }
-    return (typeof value === 'function') ? value(src) : value;
+    return typeof value === 'function' ? value(src) : value;
 }
 exports.rec = rec;
 //# sourceMappingURL=rec.js.map

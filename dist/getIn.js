@@ -3,9 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const parsePath_1 = require("./internal/parsePath");
 const lang_1 = require("./lang");
 exports.getIn = (src, path) => {
-    const target = typeof src === 'function' ? src() : src;
     try {
-        const r = parsePath_1.parsePath(path).reduce((acc, k) => acc[k], target);
+        const r = parsePath_1.parsePath(path).reduce((acc, k) => acc[k], src);
         if (Array.isArray(r)) {
             return [...r];
         }

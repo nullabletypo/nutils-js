@@ -3,5 +3,7 @@
  *
  * @export
  */
-export function noop(..._) { }
+export function noop(..._) {
+    /* no operation */
+}
 //# sourceMappingURL=noop.js.map
