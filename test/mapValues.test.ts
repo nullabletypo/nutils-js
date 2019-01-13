@@ -2,7 +2,7 @@ import { mapValues } from '../src/mapValues'
 
 test('mapValues', () => {
   const obj = { a: true, b: false }
-  const r = mapValues(obj, (v, k, src) => {
+  const r = mapValues(obj, (v, _k, src) => {
     expect(src).toBe(obj)
     return v ? 1 : 0
   })

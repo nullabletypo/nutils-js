@@ -2,7 +2,7 @@ import { mapKeys } from '../src/mapKeys'
 
 test('mapKeys', () => {
   const obj = { a: true, b: false }
-  const r = mapKeys(obj, (v, k, src) => {
+  const r = mapKeys(obj, (_v, k, src) => {
     expect(src).toBe(obj)
     return k + '!'
   })
