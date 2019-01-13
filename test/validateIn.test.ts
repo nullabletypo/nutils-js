@@ -1,9 +1,9 @@
 import { validateIn } from '../src/validateIn'
 
-const src = () => ({
+const src = {
   obj: { a: 'a', b: 'b' },
   arr: [{ prop: 'a' }, { prop: 'b' }],
-})
+}
 
 test('validate', () => {
   const r1 = validateIn(src, ['obj', 'a'], s => typeof s === 'string')

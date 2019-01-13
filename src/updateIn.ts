@@ -3,7 +3,7 @@ import { rec } from './internal/rec'
 
 interface UpdateInFunction {
   <T extends object, K extends keyof T, V extends T[K], R extends V>(
-    src: (() => T) | T,
+    src: T,
     path: K | [K],
     patch: (value: V) => R,
   ): T
@@ -14,7 +14,7 @@ interface UpdateInFunction {
     V extends T[K1][K2],
     R extends V
   >(
-    src: (() => T) | T,
+    src: T,
     path: [K1, K2],
     patch: (value: V) => R,
   ): T
@@ -26,7 +26,7 @@ interface UpdateInFunction {
     V extends T[K1][K2][K3],
     R extends V
   >(
-    src: (() => T) | T,
+    src: T,
     path: [K1, K2, K3],
     patch: (value: V) => R,
   ): T
@@ -39,7 +39,7 @@ interface UpdateInFunction {
     V extends T[K1][K2][K3][K4],
     R extends V
   >(
-    src: (() => T) | T,
+    src: T,
     path: [K1, K2, K3, K4],
     patch: (value: V) => R,
   ): T
@@ -53,7 +53,7 @@ interface UpdateInFunction {
     V extends T[K1][K2][K3][K4][K5],
     R extends V
   >(
-    src: (() => T) | T,
+    src: T,
     path: [K1, K2, K3, K4, K5],
     patch: (value: V) => R,
   ): T
@@ -68,22 +68,17 @@ interface UpdateInFunction {
     V extends T[K1][K2][K3][K4][K5][K6],
     R extends V
   >(
-    src: (() => T) | T,
+    src: T,
     path: [K1, K2, K3, K4, K5, K6],
     patch: (value: V) => R,
   ): T
-  <T extends object>(
-    src: (() => T) | T,
-    path: string,
-    patch: (value: any) => any,
-  ): any
+  <T extends object>(src: T, path: string, patch: (value: any) => any): any
 }
 
 export const updateIn: UpdateInFunction = <T>(
-  src: (() => T) | T,
+  src: T,
   path: string | string[],
   patch: Function,
 ) => {
-  const target = typeof src === 'function' ? src() : src
-  return rec(target, parsePath(path), patch, 0)
+  return rec(src, parsePath(path), patch, 0)
 }
