@@ -9,7 +9,7 @@ test('primitive', () => {
 test('object', () => {
   const a = [{ id: 1 }, { id: 2 }]
   const b = [{ id: 1 }, { id: 3 }]
-  const r1 = intersection(a, b, el => el.id + '')
+  const r1 = intersection(a, b, el => String(el.id))
   const r2 = intersection(a, b)
   expect(r1).toEqual([{ id: 1 }])
   expect(r2).toEqual([])

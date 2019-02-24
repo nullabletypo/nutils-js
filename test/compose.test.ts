@@ -2,7 +2,7 @@ import { compose } from '../src/compose'
 
 const add = (a: number, b: number) => a + b
 const square = (n: number) => n * n
-const toString = (s: number) => s + ''
+const toString = (s: number) => String(s)
 
 test('compose', () => {
   const f = compose(
