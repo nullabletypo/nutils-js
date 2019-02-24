@@ -8,4 +8,4 @@ export function difference(a, b, getKey) {
     const bHash = idx(b, { key: getKey });
     return a.filter(el => !has(bHash, getKey(el)));
 }
-//# sourceMappingURL=defference.js.map
+//# sourceMappingURL=difference.js.map

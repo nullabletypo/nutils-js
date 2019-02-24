@@ -11,4 +11,4 @@ function difference(a, b, getKey) {
     return a.filter(el => !has_1.has(bHash, getKey(el)));
 }
 exports.difference = difference;
-//# sourceMappingURL=defference.js.map
+//# sourceMappingURL=difference.js.map
