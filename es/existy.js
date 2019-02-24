@@ -6,6 +6,6 @@
  * @returns {boolean}
  */
 export function existy(v) {
-    return v != undefined;
+    return v != null;
 }
 //# sourceMappingURL=existy.js.map

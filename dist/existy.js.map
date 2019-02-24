@@ -1,1 +1,1 @@
-{"version":3,"file":"existy.js","sourceRoot":"","sources":["../src/existy.ts"],"names":[],"mappings":";;AAAA;;;;;;GAMG;AACH,SAAgB,MAAM,CAAI,CAAuB;IAC/C,OAAO,CAAC,IAAI,SAAS,CAAA;AACvB,CAAC;AAFD,wBAEC"}
+{"version":3,"file":"existy.js","sourceRoot":"","sources":["../src/existy.ts"],"names":[],"mappings":";;AAAA;;;;;;GAMG;AACH,SAAgB,MAAM,CAAI,CAAuB;IAC/C,OAAO,CAAC,IAAI,IAAI,CAAA;AAClB,CAAC;AAFD,wBAEC"}

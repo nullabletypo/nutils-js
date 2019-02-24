@@ -94,7 +94,7 @@ function isEmpty(value) {
 }
 exports.isEmpty = isEmpty;
 function isFalsy(value) {
-    return !Boolean(value);
+    return !Boolean(value); // eslint-disable-line
 }
 exports.isFalsy = isFalsy;
 function isTruthy(value) {

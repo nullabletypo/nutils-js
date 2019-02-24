@@ -45,4 +45,29 @@ export declare type Diff<T, U> = Omit<T, keyof T & keyof U>;
 export declare type WeakDiff<T, U> = Diff<T, U> & {
     [K in Extract<keyof T, keyof U>]?: T[K];
 };
+/**
+ * Overwrite T by U
+ *
+ * @example
+ * type A = {a: string, b: number}
+ * type B = {a?: string, b: number, x: number}
+ * type C = Overwrite<A, B> // {b: number} & B
+ *
+ */
 export declare type Overwrite<T, U> = Diff<T, U> & U;
+/**
+ * @example
+ * type A = {a: string, b: number: c: number}
+ * type T = MatchKeys<A, string> // "a"
+ */
+export declare type MatchKeys<T, TVal> = ({
+    [K in keyof T]: T[K] extends TVal ? K : never;
+})[keyof T];
+/**
+ * @example
+ * type A = {a: string, b: number: c: number}
+ * type T = UnMatchKeys<A, string> // "b" | "c
+ */
+export declare type UnMatchKeys<T, U> = ({
+    [K in keyof T]: T[K] extends U ? never : K;
+})[keyof T];

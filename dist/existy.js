@@ -8,7 +8,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {boolean}
  */
 function existy(v) {
-    return v != undefined;
+    return v != null;
 }
 exports.existy = existy;
 //# sourceMappingURL=existy.js.map

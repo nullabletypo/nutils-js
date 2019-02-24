@@ -74,7 +74,7 @@ export function isEmpty(value) {
     }
 }
 export function isFalsy(value) {
-    return !Boolean(value);
+    return !Boolean(value); // eslint-disable-line
 }
 export function isTruthy(value) {
     return Boolean(value);

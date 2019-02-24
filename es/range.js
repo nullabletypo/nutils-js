@@ -1,3 +1,6 @@
+function director(start, end) {
+    return start <= end ? (n) => n <= end : (n) => n >= end;
+}
 export function range(x, y, z = 1) {
     z = Math.abs(z) || 1;
     const [start, end] = arguments.length === 1 ? [0, x] : [x, y];
@@ -10,8 +13,5 @@ export function range(x, y, z = 1) {
         current += step;
     }
     return result;
-}
-function director(start, end) {
-    return start <= end ? (n) => n <= end : (n) => n >= end;
 }
 //# sourceMappingURL=range.js.map

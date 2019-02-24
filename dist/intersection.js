@@ -4,7 +4,7 @@ const has_1 = require("./has");
 const contains_1 = require("./contains");
 const idx_1 = require("./idx");
 function intersection(a, b, getKey) {
-    if (getKey == undefined) {
+    if (getKey === undefined) {
         return a.filter(el => contains_1.contains(b, el));
     }
     const bHash = idx_1.idx(b, { key: getKey });
