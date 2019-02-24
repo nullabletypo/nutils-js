@@ -102,7 +102,7 @@ export function isEmpty(value: any) {
 }
 
 export function isFalsy(value: any): value is Falsy {
-  return !Boolean(value)
+  return !Boolean(value) // eslint-disable-line
 }
 
 export function isTruthy(value: any) {

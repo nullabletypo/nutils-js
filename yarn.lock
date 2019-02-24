@@ -897,8 +897,8 @@ escodegen@^1.9.0:
     source-map "~0.5.6"
 
 "eslint-config-nullabletypo@https://github.com/nullabletypo/eslint-config-nullabletypo":
-  version "0.0.3"
-  resolved "https://github.com/nullabletypo/eslint-config-nullabletypo#0eab66e35b233e4f400036d54cafb8a43c737ec7"
+  version "0.0.5"
+  resolved "https://github.com/nullabletypo/eslint-config-nullabletypo#6a3386da5f2ab4c851efb1e10f82d4e9d91b392b"
   dependencies:
     "@typescript-eslint/eslint-plugin" "^1.4.0"
     eslint-config-prettier "^4.0.0"

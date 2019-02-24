@@ -1,4 +1,4 @@
 module.exports = {
   notify: true,
-  preset: 'ts-jest'
+  preset: 'ts-jest',
 }

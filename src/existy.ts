@@ -6,5 +6,5 @@
  * @returns {boolean}
  */
 export function existy<T>(v: T | null | undefined): v is T {
-  return v != undefined
+  return v != null
 }

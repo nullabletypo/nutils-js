@@ -1,3 +1,7 @@
+function director(start: number, end: number) {
+  return start <= end ? (n: number) => n <= end : (n: number) => n >= end
+}
+
 /**
  * create array of numbers from start to end.
  */
@@ -17,8 +21,4 @@ export function range(x: number, y?: number, z = 1) {
   }
 
   return result
-}
-
-function director(start: number, end: number) {
-  return start <= end ? (n: number) => n <= end : (n: number) => n >= end
 }
