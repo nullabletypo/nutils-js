@@ -40,7 +40,7 @@
   },
   "keywords": [],
   "scripts": {
-    "create-index": "cti create -s ./src -e internal",
+    "create-index": "cti create -s ./src -e internal wip",
     "compile": "npm-run-all create-index compile:*",
     "compile:dist": "tsc",
     "compile:es": "tsc --module es2015 --outDir ./es",
