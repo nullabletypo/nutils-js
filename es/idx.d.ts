@@ -9,8 +9,8 @@ interface Mappers<T, U> {
     key?: KM<T>;
     val?: VM<T, U>;
 }
-declare function _idx<T, V = T>(src: Iterable<T>, mappers?: Mappers<T, V>): HashMap<V>;
-declare function by<T, K extends keyof T>(src: Iterable<T>, key: K, mapper?: VM<T, T[K]>): HashMap<T>;
+declare function _idx<T, V = T>(src: Iterable<T>, mappers?: Mappers<T, V>): HashMap<{}>;
+declare function by<T, K extends keyof T>(src: Iterable<T>, key: K, mapper?: VM<T, T[K]>): HashMap<{}>;
 export declare const idx: typeof _idx & {
     by: typeof by;
 };
