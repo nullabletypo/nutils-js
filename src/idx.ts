@@ -27,8 +27,9 @@ const transformer = <T, V>(m: NonNullableHashMap<Mappers<T, V>>) => {
 }
 
 function _idx<T, V = T>(src: Iterable<T>, mappers?: Mappers<T, V>) {
-  const m = { ...defaults, ...mappers } as NonNullableHashMap<Mappers<T, V>>
-  return Array.from(src).reduce(transformer(m), {} as HashMap<V>)
+  const key = mappers!['key'] || defaults['key']
+  const val = mappers!['val'] || defaults['val']
+  return Array.from(src).reduce(transformer({ key, val }), {} as HashMap<V>)
 }
 
 function by<T, K extends keyof T>(
@@ -36,7 +37,7 @@ function by<T, K extends keyof T>(
   key: K,
   mapper?: VM<T, T[K]>,
 ) {
-  const m: any = { key: (el: T) => el[key], val: mapper }
+  const m: any = { ...defaults, key: (el: T) => el[key], val: mapper }
   return _idx(src, m)
 }
 
