@@ -136,10 +136,10 @@
   resolved "https://registry.yarnpkg.com/@types/jest-diff/-/jest-diff-20.0.1.tgz#35cc15b9c4f30a18ef21852e255fdb02f6d59b89"
   integrity sha512-yALhelO3i0hqZwhjtcr6dYyaLoCHbAMshwtj6cGxTvHZAKXHsYGdff6E8EPw3xLKY0ELUTQ69Q1rQiJENnccMA==
 
-"@types/jest@^24.0.6":
-  version "24.0.6"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.6.tgz#ba4c8c7900ce098a82ca99293cbe4192bde4f355"
-  integrity sha512-NE7FBG/F4cMDKdCBqgyd+Sa6JZ5GiMOyA5QwJdeS4Ii/Z9a18WgGbFrHbcr48/7I9HdnkaAYP+S2MmQ27qoqJA==
+"@types/jest@^24.0.9":
+  version "24.0.9"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.9.tgz#74ce9cf337f25e189aa18f76ab3d65e8669b55f2"
+  integrity sha512-k3OOeevcBYLR5pdsOv5g3OP94h3mrJmLPHFEPWgbbVy2tGv0TZ/TlygiC848ogXhK8NL0I5up7YYtwpCp8xCJA==
   dependencies:
     "@types/jest-diff" "*"
 
@@ -148,34 +148,34 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/node@^11.9.5":
-  version "11.9.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.9.5.tgz#011eece9d3f839a806b63973e228f85967b79ed3"
-  integrity sha512-vVjM0SVzgaOUpflq4GYBvCpozes8OgIIS5gVXVka+OfK3hvnkC1i93U8WiY2OtNE4XUWyyy/86Kf6e0IHTQw1Q==
+"@types/node@^11.10.0":
+  version "11.10.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.10.0.tgz#08eeb736ae678ccf9ca0922063f3a08795894ede"
+  integrity sha512-6Mb9+PPq9UzRpQrlPzZAbhEvodWDTnsIakddUAtSDpKYF6eu5zAdW31n8x7UZStvqGnDC7dCJnvU188ylv/Ytw==
 
-"@typescript-eslint/eslint-plugin@^1.4.0":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-1.4.1.tgz#f752a6888a957fd411c7bcada11884c4257d374a"
-  integrity sha512-+7wRNSKK+flJR0pOcGuTP2QwoJYJ91jdZV8Hm0IwVAWTqww8Jt5sN7r/Mlf2oFmDcO8jpM3ajsZCHJ4MmBMRjA==
+"@typescript-eslint/eslint-plugin@^1.4.1":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-1.4.2.tgz#370bc32022d1cc884a5dcf62624ef2024182769d"
+  integrity sha512-6WInypy/cK4rM1dirKbD5p7iFW28DbSRKT/+PGn+DYzBWEvHq5KnZAqQ5cX25JBc0qMkFxJNxNfBbFXJyyzVcw==
   dependencies:
-    "@typescript-eslint/parser" "1.4.1"
-    "@typescript-eslint/typescript-estree" "1.4.1"
+    "@typescript-eslint/parser" "1.4.2"
+    "@typescript-eslint/typescript-estree" "1.4.2"
     requireindex "^1.2.0"
     tsutils "^3.7.0"
 
-"@typescript-eslint/parser@1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-1.4.1.tgz#a7cd1a41722da6a37088ea90c0009ea56a27a372"
-  integrity sha512-W+9qep7F4Rn5Eq8F2vkOGbxiy639quYBGvDO6c4p4kIYnKdWj1rBGh3PoyOlaA1v1Dttj23yCRl9Ca9NmdgWCQ==
+"@typescript-eslint/parser@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-1.4.2.tgz#acfdee2019958a41d308d768e53ded975ef90ce8"
+  integrity sha512-OqLkY9295DXXaWToItUv3olO2//rmzh6Th6Sc7YjFFEpEuennsm5zhygLLvHZjPxPlzrQgE8UDaOPurDylaUuw==
   dependencies:
-    "@typescript-eslint/typescript-estree" "1.4.1"
+    "@typescript-eslint/typescript-estree" "1.4.2"
     eslint-scope "^4.0.0"
     eslint-visitor-keys "^1.0.0"
 
-"@typescript-eslint/typescript-estree@1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-1.4.1.tgz#6ca30b1770db0aee62b92a1c4ac5eaabc332c116"
-  integrity sha512-23nw1CtVklWvkN9RotPjYqpVSzAoXtF9rdqGwyjJ4Bzd6q82CSXOQ+KBRnKePAcwJ2YtOlQQRi9lDX+DIdpCOA==
+"@typescript-eslint/typescript-estree@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-1.4.2.tgz#b16bc36c9a4748a7fca92cba4c2d73c5325c8a85"
+  integrity sha512-wKgi/w6k1v3R4b6oDc20cRWro2gBzp0wn6CAeYC8ExJMfvXMfiaXzw2tT9ilxdONaVWMCk7B9fMdjos7bF/CWw==
   dependencies:
     lodash.unescape "4.0.1"
     semver "5.5.0"
@@ -912,10 +912,10 @@ escodegen@^1.9.1:
     source-map "~0.6.1"
 
 "eslint-config-nullabletypo@https://github.com/nullabletypo/eslint-config-nullabletypo":
-  version "0.0.5"
-  resolved "https://github.com/nullabletypo/eslint-config-nullabletypo#6a3386da5f2ab4c851efb1e10f82d4e9d91b392b"
+  version "0.0.6"
+  resolved "https://github.com/nullabletypo/eslint-config-nullabletypo#eb75322fb64884226180e3c75ca4df755119433a"
   dependencies:
-    "@typescript-eslint/eslint-plugin" "^1.4.0"
+    "@typescript-eslint/eslint-plugin" "^1.4.1"
     eslint-config-prettier "^4.0.0"
     eslint-plugin-prettier "^3.0.1"
 

@@ -1,5 +1,5 @@
 {
-  "name": "utls",
+  "name": "@nullabletypo/utils-js",
   "description": "utility function pack",
   "version": "0.0.11",
   "author": "nullabletypo",
@@ -16,16 +16,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nullabletypo/utils.git"
+    "url": "https://github.com/nullabletypo/utils-js.git"
   },
   "bugs": {
-    "url": "https://github.com/nullabletypo/utils/issues"
+    "url": "https://github.com/nullabletypo/utils-js/issues"
   },
-  "homepage": "https://github.com/nullabletypo/utils",
+  "homepage": "https://github.com/nullabletypo/utils-js",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^24.0.6",
-    "@types/node": "^11.9.5",
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.10.0",
     "create-ts-index": "^1.5.0",
     "eslint": "^5.14.1",
     "eslint-config-nullabletypo": "https://github.com/nullabletypo/eslint-config-nullabletypo",
