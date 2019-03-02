@@ -26,9 +26,9 @@ const transformer = <T, V>(m: NonNullableHashMap<Mappers<T, V>>) => {
   }
 }
 
-function _idx<T, V = T>(src: Iterable<T>, mappers?: Mappers<T, V>) {
-  const key = mappers!['key'] || defaults['key']
-  const val = mappers!['val'] || defaults['val']
+function _idx<T, V = T>(src: Iterable<T>, mappers: Mappers<T, V> = {}) {
+  const key = mappers['key'] || defaults['key']
+  const val = mappers['val'] || defaults['val']
   return Array.from(src).reduce(transformer({ key, val }), {} as HashMap<V>)
 }
 
